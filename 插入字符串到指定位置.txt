@@ -1,0 +1,27 @@
+char* insert(char *str,char *substr,int n)
+{
+    int j=0;
+    char *news,*begin;
+    news=(char *)malloc(strlen(str)+2+strlen(substr));
+    begin=news;
+    for(int i=0;i<n;i++)
+      
+*news++=*str++;
+ 
+    while(*substr!=0)
+	  
+*news++=*substr++;
+        
+    while(*str!=0)
+     
+*news++=*str++;
+    
+    
+*news='\0';
+ 
+    strcpy(str,begin);
+    free(begin);
+    
+return str;
+
+}
